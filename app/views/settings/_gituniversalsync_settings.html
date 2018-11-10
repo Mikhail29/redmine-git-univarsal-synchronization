@@ -1,0 +1,23 @@
+<fieldset>
+<legend>Git Settings</legend>
+<p>
+    <%= content_tag(:label, l('prune.label')) %>
+    <%= check_box_tag('settings[prune]', 'yes', settings['prune'] == 'yes' ) %>
+    <em class="info"><%= l('prune.description') %></em>
+</p>
+<p>
+    <%= content_tag(:label, l('auto_create.label')) %>
+    <%= check_box_tag('settings[auto_create]', 'yes', settings['auto_create'] == 'yes' ) %>
+    <em class="info"><%= l('auto_create.description') %></em>
+</p>
+<p>
+    <%= content_tag(:label, l('local_repositories_path.label')) %>
+    <%= text_field_tag('settings[local_repositories_path]', settings['local_repositories_path'], :size => 50) %>
+    <em class="info"><%= l('local_repositories_path.description') %></em>
+</p>
+<p>
+    <%= content_tag(:label, l('api_key.label')) %>
+    <%= text_field_tag('settings[api_key]', settings['api_key'], :size => 50) %>
+    <em class="info"><%= l('api_key.description') %></em>
+</p>
+</fieldset>

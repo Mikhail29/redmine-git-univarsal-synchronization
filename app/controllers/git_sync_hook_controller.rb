@@ -9,7 +9,7 @@ class GitSyncHookController < ActionController::Base
             git_success = update_repository(repository)
             if git_success
                 # Fetch the new changesets into Redmine
-                exec('wget https://rm.mmwebstudio.pp.ua/sys/fetch_changesets?key=XKqzhWQn7OMIWMrCxq76')
+                repository.fetch_changesets
                 render(:text => 'OK', :status => :ok)
             else
                 render(:text => "Git command failed on repository: #{repository.identifier}!", :status => :not_acceptable)

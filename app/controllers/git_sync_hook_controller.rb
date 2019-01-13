@@ -8,7 +8,6 @@ class GitSyncHookController < ActionController::Base
             p repository.inspect
             git_success = update_repository(repository)
             if git_success
-                # Fetch the new changesets into Redmine
                 repository.fetch_changesets
                 render(:text => 'OK', :status => :ok)
             else

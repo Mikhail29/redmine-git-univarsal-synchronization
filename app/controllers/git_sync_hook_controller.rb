@@ -7,7 +7,14 @@ class GitSyncHookController < ActionController::Base
             repository = find_repository
             p repository.inspect
             git_success = update_repository(repository)
-            render(:text => 'OK', :status => :ok)
+            if git_success
+                # Fetch the new changesets into Redmine
+                repository.fetch_changesets
+                render(:text => 'OK', :status => :ok)
+            else
+                render(:text => "Git command failed on repository: #{repository.identifier}!", :status => :not_acceptable)
+            end
+
         else
             raise ActionController::RoutingError.new('Not Found')
         end

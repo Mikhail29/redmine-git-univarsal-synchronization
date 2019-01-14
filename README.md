@@ -3,6 +3,10 @@
 ## Русский 
 
 Данный модуль позволяет проводить синхронизацию локального хранилища и удаленного. Данный модуль универсальный так как может работать со всеми репозитория которые поддерживают веб хуки.
+
+**Для установки переходим в директорию плагинов Redmine и выполняем 
+`git clone git@github.com:Mikhail29/redmine-git-univarsal-synchronization.git gituniversalsync.`**
+
 В настройках находятся такие параметры:
 * Prune - добавляет параметр -p git fetch
 * Автосоздание - позволяет клонировать репозиторий и добавлять автоматически в проект если указаны все необходимые параметры (перечень необходимых параметров смотрите ниже)
@@ -32,6 +36,10 @@ https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxxxxx&project_id=git-sy
 ## English
 
 This module allows you to synchronize local storage and remote storage. This module is universal as it can work with all repositories that support web hooks.
+
+**To install, go to the Redmine plugins directory and execute 
+`git clone git@github.com:Mikhail29/redmine-git-univarsal-synchronization.git gituniversalsync`**
+
 In the settings are the following parameters:
 * Prune - add the -p git fetch parameter
 * Auto-creation - allows you to clone the repository and add automatically to the project if all the necessary parameters are specified (see the list of necessary parameters below)

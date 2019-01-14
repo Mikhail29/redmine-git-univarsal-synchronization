@@ -21,8 +21,11 @@ https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxx&project_id=git-sync
 * project_id - идентификатор проекта к которому относится данный репозиторий
 * repository_name - имя репозитория, по сути это имя папки в локальном хранилище в которой будет размещен новый репозиторий при его автосоздание
 * repository_git_url - url удаленного репозитория с которого нужно будет клонировать репозиторий локально если он не создан, указать можно как url для клонирования по git протоколу так и по https протоколу, и в том и в том случае будет верно работать.
+
 Пример url для вебхука с автосоздание репозитория если он не существует:
 https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxxxxx&project_id=git-sync&repository_name=git-sync&repository_git_url=git@gitlab.com/mmwebstudioteam/repository.git
+
+эти ссылки надо указать в вебхуке Push events
 
 Так же я недавно включил в плагин Автоматическое слежение за изменениями при каждом git pull(fetch_changesets) поэтому  Автоматически следить за изменениями в админке redmine по пути Администрирование->Настройки->Хранилища лучше отключить
 
@@ -37,6 +40,7 @@ In the settings are the following parameters:
 To update existing repositories, only two parameters are required:
 * key - it is the api key, in fact, in this parameter, the key is transferred stored in the synchronization module settings for validating requests
 * project_id - the project identifier to which this repository belongs
+
 Example webhuk url only for updating project repositories:
 https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxx&project_id=git-sync
 
@@ -45,7 +49,10 @@ To update existing repositories and autocreate new projects (works if autocreati
 * project_id - the project identifier to which this repository belongs
 * repository_name is the name of the repository, in fact, this is the name of the folder in the local storage where the new repository will be located when it is auto-created
 * repository_git_url - the url of the remote repository from which you need to clone the repository locally if it is not created, you can specify the url for cloning using the git protocol or the https protocol, and in that and in that case it will work correctly.
+
 Example url for webhost with auto-create repository if it doesn't exist:
 https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxxxxx&project_id=git-sync&repository_name=git-sync&repository_git_url=git@gitlab.com/mmwebstudioteam/repository.git
+
+These links should be indicated on the webbook Push events
 
 I also recently included in the plugin Automatic tracking of changes with each git pull (fetch_changesets), so it is better to follow the changes in the admin panel of the redmine along the path Administration-> Settings-> Repositories to disable automatically

@@ -2,6 +2,8 @@
 
 ## Русский 
 
+# Рад сообщить что появилась версия для redmine 4. На данный момент я проверял плагин на версии 4.0.1 но думаю на 4.0.0 и на более позние версии плагин подойдёт. Плагин для версии 3 искать в соответствующей ветке.
+
 Данный модуль позволяет проводить синхронизацию локального хранилища и удаленного. Данный модуль универсальный так как может работать со всеми репозитория которые поддерживают веб хуки.
 
 **Для установки переходим в директорию плагинов Redmine и выполняем 
@@ -34,6 +36,8 @@ https://rm.mmwebstudio.pp.ua/git_sync_hook?key=xxxxxxxxxxxxxxx&project_id=git-sy
 Так же я недавно включил в плагин Автоматическое слежение за изменениями при каждом git pull(fetch_changesets) поэтому  Автоматически следить за изменениями в админке redmine по пути Администрирование->Настройки->Хранилища лучше отключить
 
 ## English
+
+# I am glad to announce that a version for redmine 4 has appeared. At the moment I checked the plugin for version 4.0.1 but I think for 4.0.0 and for a later version of the plugin will work. Plugin for version 3 to search in the appropriate branch.
 
 This module allows you to synchronize local storage and remote storage. This module is universal as it can work with all repositories that support web hooks.
 

@@ -1,7 +1,6 @@
 require 'json'
 
 class GitSyncHookController < ActionController::Base
-    skip_before_filter :verify_authenticity_token, :check_if_login_required
    def index
         if Setting.plugin_gituniversalsync['api_key'] == params[:key] 
             repository = find_repository
